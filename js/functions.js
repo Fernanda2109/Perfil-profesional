@@ -44,7 +44,7 @@ document.getElementById("box_two").innerText="<h1>Wilder duarte</h1>";
   var bolean_two= false;
   // arrays (arreglos)(listas)
   let arrray_num= [1,2,3,4];
-  let array_yex= ["lunes","martes","miercoles", "jueves", "viernes", "sabado"];
+  let array_yexdd= ["lunes","martes","miercoles", "jueves", "viernes", "sabado"];
   let array_mix= [1,"2",3,2.5,"c"];
   let array_mul =[
     {name:"A", last_name:1,age:23},
@@ -95,4 +95,89 @@ Swal.fire({
     icon: 'sucess',
     title: 'respuesta',
     html:respuesta
+})
+// Operadores logicos y estructructuras condicionales 
+// And && con un if 
+var bool= true;
+var numeric=7;
+if (!bool&&numeric==="7"){// se llama negacion o inverse
+  // si utilizamos 3 veces el igual compara el valor y tipo de dato
+console.log("ENTRA IF");
+}
+else{
+  console.log("ENTRA ELSE");
+}
+// OR || con if
+var age= "31";
+if(age == 32 || numeric==7){;
+console.log("entra en if");
+age++;
+}
+else{
+  console.log("Entra a else");
+  age-=2;
+  console.log(age);
+}
+// For 
+let array_yexdddd = ["lunes","martes","miercoles", "jueves", "viernes", "sabado"];
+for (let i=0; i<array_yexdddd.length; i++){
+  console.log(array_yexdddd[i]+ " "+ (i+1));
+
+}
+// WHILE
+let position=0;
+while(position<7){
+  console.log(array_yexdddd[position]) + " " +(positio +1);
+  position++;
+}
+// do while
+let w= 0;
+do{
+  console.log("ho");
+  console.log(array_yedddd[w]+""+(w+1));
+  w++;
+}while(w<array_yexdddd.length);
+// event and functions
+//ejem();
+//ejem2();
+function load_page(){
+  alert("Bienvenido");
+}
+function box_onblur(){
+  alert("olvidaste dar enter")
+}
+function ejem(){
+  alert("Bienvenido 2")
+}
+function ejem2(){
+  alert("Bienvenido 3")
+}
+function box_onblur(){
+  const box_onblur= document.querySelector("#box_omblur");
+  if (box_onblur.ariaValueMax.length<=2){
+    alert("problemas con el texto");
+  }
+}
+const btn_changeColor= document.querySelector("#changecolor");
+btn_changeColor.addEventListener("click",()=>{
+  document.body.style.background="rgb(0,0,20)";
+  document.body.style.color="#fff"
+
+});
+const form= document.getElementById("form_register");
+const nombres=document.getElementById("nombres");
+const apellidos= document.getElementById("Apellidos");
+const validation= documento.getElementById("validation");
+form.addEventListener("submit",name_event=>{
+
+  form.addEventListener("submit", name_event=>{
+    name_event.preventDefault();
+    let info="";
+    if (nombres.ariaValueMax.length<= || apellidos.ariaValueMax.length){
+      info+= "Nombres o Apellidos incoorectos";
+      validation.style.color="green";
+    }
+    validation.innerTExt=info;
+  })
+
 })

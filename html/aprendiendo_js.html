@@ -5,14 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprendiendo js</title>
 </head>
-<body>
+<body onload="load_page()">
+
     
     <label for="" id="box_one">
 
     </label>
     <label for="" id="box_two">
+
         
     </label>
+    <input type="text" id="box_ondlur" ondlur="box_onblur()" placeholder="write something here" value="Esto es un texto" size="30">
+
+
+    <button id="change_color"> cambiar color</button>
+    <br></br>
+    <form id="dorm_register">
+        <label for="nombres"> Nombres</label>
+        <input type=" text" id="nombres" size="30" placeholder="Please your name">
+        <br>
+        <label for="apellidos"> Apellidos</label>
+        <input type=" text" id="apellidos" size="30" placeholder="Please your secondname">
+        <br>
+        <button type="submit"> resgistrarse</button>
+        <button type="reset"> Limpiar </button>
+        <br>
+        <label id="validation">
+
+        </label>
+
+    </form>
     <script src="../js/code.jquery.com_jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/functions.js"></script>
